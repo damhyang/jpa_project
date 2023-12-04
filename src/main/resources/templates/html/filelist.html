@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div th:each="uploadfile:${uploadfileObject}">
+            
+            <p>
+                <span th:text="${uploadfile.originalFileName}"></span>&nbsp;&nbsp;
+                <span th:text="${uploadfile.regDate}"></span>&nbsp;&nbsp;
+                <span th:text="${uploadfile.memberId}"></span>&nbsp;&nbsp;
+                <a th:href="'/download?uid='+${uploadfile.uuid}"><button>다운로드</button></a>
+                <span th:text="${session.memberObject.memberName}"></span>
+
+            </p>
+        
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr th:each="i : ${userList}">
+            <td th:text="${i.seq}"></td>
+            <td th:text="${i.user}"></td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr th:each="number : ${#numbers.sequence(1, 10)}">
+            <td th:text="${number}"></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

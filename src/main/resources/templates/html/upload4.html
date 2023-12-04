@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <th:block>
+        <form th:if="${session.memberObject}==null" action="/login">
+            <p>로그인이 되어있지 않습니다. 로그인을 하십시오.</p>
+            <button type="submit">로그인</button>
+        </form> 
+        <form th:unless="${session.memberObject}==null" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="memberId" th:value="${session.memberObject.memberId}"><br>
+            <input type="file" name="file" multiple><br>
+            <button type="submit">업로드</button>
+        </form>
+    </th:block>
+</html>

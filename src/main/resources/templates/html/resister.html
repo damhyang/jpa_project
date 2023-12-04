@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+    <form action="/resister" method="post">
+        ID : <input type="text" name="memberId" th:placeholder="${session.memberObject.memberId}+'외 다른 아이디 사용'"><br>
+        PW : <input type="password" name="memberPw" th:value="${session.memberObject.memberPw}"><br>
+        Name : <input type="text"  name="memberName" th:value="${session.memberObject.memberName}"><br>
+        <input type="submit" value="회원가입">
+    </form>
+</html>
+
+</form>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode</title>
+</head>
+<body>
+    <p th:if="${mode} != null" th:text="${mode.user}"></p>
+    <hr>
+    <p th:unless="${mode} != null" th:text="이름없음"></p>
+    <p th:unless="${mode} != null">조회된 데이터가 없습니다.</p>
+    <hr>
+    <span th:switch="${mode.seq}">
+        <span th:case="1">A이다.</span>
+        <span th:case="2">b이다.</span>
+    </span>
+
+</body>
+</html>

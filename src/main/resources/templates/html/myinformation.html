@@ -1,0 +1,9 @@
+<html>
+    <body>
+        id:<p th:text="${memberObject.memberId}"></p>
+        name:<p th:text="${memberObject.memberName}"></p>
+        <p>사진</p>
+        <img th:src="'/image/'+${pictureObject.fileName}">
+    </body>
+
+</html>
